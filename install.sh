@@ -47,15 +47,6 @@ echo "Pacote instalado!"
 echo "....."
 echo
 
-echo "Iniciando instalação do postgresql 12..."
-sleep 3
-echo
-sudo apt install postgresql-12 -y
-echo "Postgresql 12 instalado."
-echo "....."
-echo
-
-echo "Iniciando a instalação do pgadmin4.."
 echo "instalação dos certificados.."
 sleep 3
 echo
@@ -67,8 +58,19 @@ echo
 echo "Adição do repositório no sources.list"
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
 echo "Atualizando o sistema operacional para buscar os novos repositórios..."
+sudo apt update -y
 sleep 3
 echo
+
+echo "Iniciando instalação do postgresql 12..."
+sleep 3
+echo
+sudo apt install postgresql-12 -y
+echo "Postgresql 12 instalado."
+echo "....."
+echo
+
+echo "Iniciando a instalação do pgadmin4.."
 sudo apt update && sudo apt install pgadmin4 -y
 echo "Iniciando a instalação.."
 sleep 3
