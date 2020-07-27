@@ -137,10 +137,10 @@ echo "ifconfig instalado."
 echo "....."
 echo
 
-# echo "Iniciando a instalação do vim"
-# sudo apt install vim -y
-# echo "vim instalado!"
-# echo "....."
+echo "Iniciando a instalação do vim"
+sudo apt install vim -y
+echo "vim instalado!"
+echo "....."
 
 echo "iniciando a instalação do guake.."
 sleep 3
