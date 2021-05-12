@@ -191,6 +191,13 @@ sudo apt install telegram-desktop -y
 echo "Telegram instalado!"
 echo
 
+echo "Iniciando a instalação do pavucontrol (controlador de microfone)"
+sleep 3
+echo
+sudo apt install pavucontrol -y
+echo "PAVUCONTROL controlador de microfone instalado!"
+echo
+
 echo "---------------------------------"
 echo "| INSTALAÇÃO PADRÃO FINALIZADA! |"
 echo "---------------------------------"
