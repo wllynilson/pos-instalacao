@@ -52,6 +52,8 @@ echo "global config git ok."
 
 sleep 3
 
+internet
+
 echo "Iniciando instalação do pacote de desenvolvimento..."
 echo "Essa instalação pode demorar de acordo com a velocidade da sua conexão."
 sleep 3
@@ -64,10 +66,23 @@ echo
 echo "Iniciando instalação de utilitarios.."
 sleep 3
 echo
-sudo apt install htop vim guake -y
+sudo apt install htop vim guake screenfetch -y
 echo "utilitários instalados!"
 echo "....."
 echo
+
+echo "Atualizando sistema ..."
+sleep 2
+echo
+sudo apt update && sudo apt upgrade -y
+
+mkdir ~/_Developer
+echo "Diretório '_Developer' criado na raiz do usuário."
+
+sleep 2
+
+echo "Aguarde ..."
+sleep 4
 
 
 echo "---------------------------------"
