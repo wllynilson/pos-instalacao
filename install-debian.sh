@@ -47,35 +47,12 @@ echo "Pacote instalado!"
 echo "....."
 echo
 
-echo "instalação dos certificados.."
+echo "Iniciando instalação do postgres..."
 sleep 3
-echo
-sudo apt-get install wget ca-certificates
-echo "Adição dos repositórios do postgresql.."
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sleep 3
-echo
-echo "Adição do repositório no sources.list"
-sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
-echo "Atualizando o sistema operacional para buscar os novos repositórios..."
-sudo apt update -y
-sleep 3
-echo
-
-echo "Iniciando instalação do postgresql 12..."
-sleep 3
-echo
-sudo apt install postgresql-12 -y
-echo "Postgresql 12 instalado."
-echo "....."
-echo
-
-echo "Iniciando a instalação do pgadmin4.."
-sudo apt update && sudo apt install pgadmin4 -y
-echo "Iniciando a instalação.."
-sleep 3
-echo "....."
-echo
+sudo apt-get install -y postgresql postgresql-contrib
+echo "Postgres instalado!"
+echo "......"
+sleep 1
 
 echo "Iniciando instalação do chrome..."
 sleep 3

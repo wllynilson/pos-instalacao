@@ -63,6 +63,13 @@ echo "Pacotes instalados!"
 echo "....."
 echo
 
+echo "Iniciando instalação do postgres..."
+sleep 3
+sudo apt-get install -y postgresql postgresql-contrib
+echo "Postgres instalado!"
+echo "......"
+sleep 1
+
 echo "Iniciando instalação de utilitarios.."
 sleep 3
 echo
